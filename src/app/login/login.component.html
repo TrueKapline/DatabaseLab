@@ -1,0 +1,14 @@
+<h2>Аутентификация</h2>
+<form [formGroup]="loginForm">
+  <div class="inputs">
+    <label for="username">Имя пользователя:</label>
+    <input id="username" formControlName="username" type="text" required>
+    <label for="password">Пароль:</label>
+    <input id="password" formControlName="password" type="password" required>
+  </div>
+  <div class="buttons">
+    <button type="submit" id="login" (click)="onSubmit($event)">Авторизация</button>
+    <button type="submit" id="register" (click)="onSubmit($event)">Регистрация</button>
+  </div>
+  <p class="error" *ngIf="errorMsg">{{ errorMsg }}</p>
+</form>

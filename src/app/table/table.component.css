@@ -1,0 +1,58 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#username, #password {
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+table, th, td {
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+td.id {
+  width: 30px;
+  text-align: center;
+  height: 25px;
+}
+
+td.username {
+  width: 150px;
+  text-align: left;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.username {
+  width: 150px;
+}
+
+td.password {
+  width: 300px;
+  text-align: left;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.password {
+  width: 300px;
+}
+
+.edit, .save {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.delete {
+  margin-right: 5px;
+}

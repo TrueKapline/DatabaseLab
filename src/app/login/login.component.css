@@ -1,0 +1,32 @@
+h2 {
+  margin-bottom: 10px;
+}
+
+form {
+  width: 200px;
+  max-width: 200px;
+  position: relative;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}

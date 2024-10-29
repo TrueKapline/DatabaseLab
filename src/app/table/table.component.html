@@ -1,0 +1,44 @@
+<form [formGroup]="addForm" (ngSubmit)="onAdd()">
+  <label for="username">Username:</label>
+  <input id="username" formControlName="username" />
+
+  <label for="password">Password:</label>
+  <input id="password" formControlName="password" />
+
+  <button type="submit">Добавить</button>
+</form>
+
+<div class="wrapper">
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of tableData" [formGroup]="editForm!">
+      <td class="id">{{ row.id }}</td>
+      <td class="username" *ngIf="editRowId !== row.id">{{ row.username }}</td>
+      <td class="password" *ngIf="editRowId !== row.id">{{ row.password }}</td>
+
+      <td *ngIf="editRowId === row.id">
+        <input class="username" formControlName="username" />
+      </td>
+      <td *ngIf="editRowId === row.id">
+        <input class="password" formControlName="password" />
+      </td>
+
+      <td class="control">
+        <button class="edit" *ngIf="editRowId !== row.id" (click)="onEdit(row)">Edit</button>
+        <button class="save" *ngIf="editRowId === row.id" (click)="onSave(row.id)">Save</button>
+        <button class="delete" (click)="onDelete(row.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button class="return" type="submit" (click)="onReturn()">Вернуться</button>
+</div>
